@@ -8,51 +8,54 @@ type GeneratedMutation<InputType, OutputType> = string & {
   __generatedMutationOutput: OutputType;
 };
 
-export const createTodo = /* GraphQL */ `mutation CreateTodo(
-  $condition: ModelTodoConditionInput
-  $input: CreateTodoInput!
+export const createUserProfile = /* GraphQL */ `mutation CreateUserProfile(
+  $condition: ModelUserProfileConditionInput
+  $input: CreateUserProfileInput!
 ) {
-  createTodo(condition: $condition, input: $input) {
-    content
+  createUserProfile(condition: $condition, input: $input) {
     createdAt
+    email
     id
+    profileOwner
     updatedAt
     __typename
   }
 }
 ` as GeneratedMutation<
-  APITypes.CreateTodoMutationVariables,
-  APITypes.CreateTodoMutation
+  APITypes.CreateUserProfileMutationVariables,
+  APITypes.CreateUserProfileMutation
 >;
-export const deleteTodo = /* GraphQL */ `mutation DeleteTodo(
-  $condition: ModelTodoConditionInput
-  $input: DeleteTodoInput!
+export const deleteUserProfile = /* GraphQL */ `mutation DeleteUserProfile(
+  $condition: ModelUserProfileConditionInput
+  $input: DeleteUserProfileInput!
 ) {
-  deleteTodo(condition: $condition, input: $input) {
-    content
+  deleteUserProfile(condition: $condition, input: $input) {
     createdAt
+    email
     id
+    profileOwner
     updatedAt
     __typename
   }
 }
 ` as GeneratedMutation<
-  APITypes.DeleteTodoMutationVariables,
-  APITypes.DeleteTodoMutation
+  APITypes.DeleteUserProfileMutationVariables,
+  APITypes.DeleteUserProfileMutation
 >;
-export const updateTodo = /* GraphQL */ `mutation UpdateTodo(
-  $condition: ModelTodoConditionInput
-  $input: UpdateTodoInput!
+export const updateUserProfile = /* GraphQL */ `mutation UpdateUserProfile(
+  $condition: ModelUserProfileConditionInput
+  $input: UpdateUserProfileInput!
 ) {
-  updateTodo(condition: $condition, input: $input) {
-    content
+  updateUserProfile(condition: $condition, input: $input) {
     createdAt
+    email
     id
+    profileOwner
     updatedAt
     __typename
   }
 }
 ` as GeneratedMutation<
-  APITypes.UpdateTodoMutationVariables,
-  APITypes.UpdateTodoMutation
+  APITypes.UpdateUserProfileMutationVariables,
+  APITypes.UpdateUserProfileMutation
 >;
